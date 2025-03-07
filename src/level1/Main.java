@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        // 메뉴 표출 및 메뉴 번호 입력
         mainLoop:
         while (true) {
             System.out.println("[ SPARTAN BURGER MENU ]");
@@ -18,6 +19,7 @@ public class Main {
             int index = Integer.parseInt(sc.next().trim());
             sc.nextLine();
 
+            // 입력받은 메뉴 번호 검증 및 구매 여부 선택
             menuLoop:
             while (true) {
                 try {
