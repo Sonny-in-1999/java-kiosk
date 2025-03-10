@@ -56,7 +56,7 @@ public class Kiosk {
                     .get();
 
             // 메뉴 출력
-            System.out.println("[ "+ selectedCategory.toUpperCase() + " MENU ]");
+            System.out.println("[ " + selectedCategory.toUpperCase() + " MENU ]");
             for (int i = 0; i < selectedMenuItemList.size(); i++) {
                 System.out.println(i + 1 + ". " + selectedMenuItemList.get(i).name() + " - " + selectedMenuItemList.get(i).price() + "원");
             }
