@@ -1,4 +1,4 @@
-package necessary_level2;
+package basic_level2;
 
 import java.util.List;
 import java.util.Scanner;
