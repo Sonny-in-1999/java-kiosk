@@ -1,4 +1,4 @@
-package level1;
+package necessary_level1;
 
 import java.util.Scanner;
 
@@ -20,7 +20,6 @@ public class Main {
             sc.nextLine();
 
             // 입력받은 메뉴 번호 검증 및 구매 여부 선택
-            menuLoop:
             while (true) {
                 try {
                     switch (index) {

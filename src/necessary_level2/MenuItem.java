@@ -1,4 +1,4 @@
-package level2;
+package necessary_level2;
 
 public record MenuItem(String name, int price, String description) {
 

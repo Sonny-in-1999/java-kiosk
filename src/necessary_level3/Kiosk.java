@@ -1,23 +1,24 @@
-package level2;
+package necessary_level3;
 
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        List<MenuItem> menuItemList = List.of(
-                new MenuItem("ShackBurger", 6900, "토마토, 양상추, 쉑소스가 토핑된 치즈버거"),
-                new MenuItem("SmokeShack", 8900, "베이컨, 체리 페퍼에 쉑소스가 토핑된 치즈버거"),
-                new MenuItem("CheeseBurger", 6900, "포테이토 번과 비프패티, 치즈가 토핑된 치즈버거"),
-                new MenuItem("Hamburger", 5400, "포테이토 번과 비프패티, 치즈가 토핑된 치즈버거")
-        );
+public class Kiosk {
 
+    List<MenuItem> menuItems;
+
+    public Kiosk(List<MenuItem> menuItems) {
+        this.menuItems = menuItems;
+    }
+
+    public void start() {
+        // 키오스크 동작 로직 필요
+        Scanner sc = new Scanner(System.in);
         while (true) {
             // 메뉴 출력
             System.out.println("[ SPARTAN BURGER MENU ]");
-            for (int i = 0; i < menuItemList.size(); i++) {
-                System.out.println(i + 1 + ". " + menuItemList.get(i).name() + " - " + menuItemList.get(i).price() + "원");
+            for (int i = 0; i < menuItems.size(); i++) {
+                System.out.println(i + 1 + ". " + menuItems.get(i).name() + " - " + menuItems.get(i).price() + "원");
             }
             System.out.println("0. 종료");
             System.out.print("원하시는 메뉴 번호를 입력해주세요: ");
@@ -39,13 +40,13 @@ public class Main {
             }
 
             // 입력값 검증
-            if (index < 0 || index > menuItemList.size()) {
+            if (index < 0 || index > menuItems.size()) {
                 System.out.println("존재하지 않는 메뉴 번호입니다.");
                 continue;
             }
 
             // 선택한 메뉴
-            MenuItem selectedMenuItem = menuItemList.get(index - 1);
+            MenuItem selectedMenuItem = menuItems.get(index - 1);
             selectedMenuItem.display(); // 선택한 메뉴 정보 출력
 
             // 구매 여부 확인
