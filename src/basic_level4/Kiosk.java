@@ -22,6 +22,7 @@ public class Kiosk {
             System.out.println("0. 종료");
             System.out.print("원하시는 카테고리 번호를 입력해주세요: ");
 
+            // 리스트 요소 선택값 인덱스
             int index;
 
             // 카테고리 선택
@@ -86,7 +87,9 @@ public class Kiosk {
 
             // 선택한 메뉴
             MenuItem selectedMenuItem = selectedMenuItemList.get(index - 1);
-            selectedMenuItem.display(); // 선택한 메뉴 정보 출력
+            
+            // 선택한 메뉴 정보 출력
+            selectedMenuItem.display();
 
             // 구매 여부 확인
             while (true) {
